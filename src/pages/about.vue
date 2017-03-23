@@ -13,7 +13,7 @@
         <!-- 全局header -->
         <page-header :pageType="pageType" />
         <p class="page-about-title">项目采用vue前端框架，代码开源。</p>
-        <p class="page-about-title"><a href=""> 代码github链接(来个star)</a></p>
+        <p class="page-about-title"><a href="https://github.com/alminchen/joke-robot.git"> 代码github链接(来个star)</a></p>
     </div>
 </template>
 <script>

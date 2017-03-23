@@ -1,10 +1,9 @@
 # joke
-[在线效果预览][1]
 > A Vue.js project
 
 本地调试启动：
 
-第零步：代码clone到本地： git clone https://github.com/shaqihe/life-app-vue.git
+第零步：代码clone到本地： git clone https://github.com/alminchen/joke-robot.git
 
 第一步：npm install（
            或者用淘宝的cnpm代理安装会更快，方法是：

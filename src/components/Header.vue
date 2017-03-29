@@ -120,7 +120,7 @@
 }
 
 .nav-list {
-    background: url('../assets/images/5fe.jpg');
+    background: url('/ststic/images/5fe.jpg');
     background-size: 100% 100%;  
     position: fixed;
     top: 0;

@@ -1,5 +1,6 @@
 # joke-robot
 > A Vue.js project
+
 本地调试启动步骤：
 
 第零步：代码clone到本地： git clone https://github.com/alminchen/joke-robot.git

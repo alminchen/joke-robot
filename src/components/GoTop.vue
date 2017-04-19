@@ -1,13 +1,3 @@
-/**
- * ----------------------------------------------------------
- * 回到顶部按钮
- *
- * @version  1.0
- * @author shaqihe(shaqihecome@163.com)
- *
- * @module src/components/gotop
- * ----------------------------------------------------------
- */
 <template>
     <i class="icon iconfont go-top-icon"  v-show="show" @click="goTop">&#xe807;</i>
 </template>

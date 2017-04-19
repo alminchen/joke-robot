@@ -1,15 +1,4 @@
 /**
- * ----------------------------------------------------------
- * 一些生成随机文字／头像的方法(接口中没有笑话发表的作者和作者头像mock一个)
- *
- * @version  1.0
- * @author shaqihe(shaqihecome@163.com)
- *
- * @module src/common/util/random
- * ----------------------------------------------------------
- */
-
-/**
  * @type {Object}
  */
 let random = {};
@@ -26,8 +15,8 @@ random.tohanzi = (str) => {
  * 随机生成x-y的随机送
  */
 random.randomNum = (x, y) => {
-    let num = y-x;
-    num = Math.random()*num + x;
+    let num = y - x;
+    num = Math.random() * num + x;
     return parseInt(num, 10);
 };
 
@@ -41,7 +30,7 @@ random.randomFont = (x, y) => {
         //随机生成一个unicode
         let word = '\\u' + (Math.round(Math.random() * 20901) + 19968).toString(16);
 
-        str += random.tohanzi(word); 
+        str += random.tohanzi(word);
     };
     return str;
 };

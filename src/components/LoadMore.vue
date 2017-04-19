@@ -1,13 +1,3 @@
-/**
- * ----------------------------------------------------------
- * 页面底部的加载更多按钮
- *
- * @version  1.0
- * @author shaqihe(shaqihecome@163.com)
- *
- * @module src/components/loadmore
- * ----------------------------------------------------------
- */
 <template>
     <div class="ux-load-more" @click="load">
         <span v-show="!loading" >加载更多</span>

@@ -1,13 +1,3 @@
-/**
- * ----------------------------------------------------------
- * 城市选择控件简单封装
- *
- * @version  1.0
- * @author shaqihe(shaqihecome@163.com)
- *
- * @module src/components/CitySelect
- * ----------------------------------------------------------
- */
 <template>
     <div class="ux-city-select">
         <div class="ux-city-select-content">

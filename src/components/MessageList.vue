@@ -1,13 +1,3 @@
-/**
- * ----------------------------------------------------------
- * 回到顶部按钮
- *
- * @version  1.0
- * @author shaqihe(shaqihecome@163.com)
- *
- * @module src/components/gotop
- * ----------------------------------------------------------
- */
 <template>
     <div class="ux-message-list">
         <ul class="ux-message-list-ul" id="msg-end" @click="contract">

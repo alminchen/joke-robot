@@ -1,22 +1,11 @@
-/**
- * ----------------------------------------------------------
- * 项目的接口统一管理(直接在业务代码中写请求地址，问题定位／接口修改太不优雅了)
- *
- * @version  1.0
- * @author shaqihe(shaqihecome@163.com)
- *
- * @module src/cache/cache
- * ----------------------------------------------------------
- */
-
 import 'whatwg-fetch';
 import 'fetch-jsonp';
-import {HAPPY_TYPE} from '../common/constant/constant';
+import { HAPPY_TYPE } from '../common/constant/constant';
 
 /**
  *  开心一刻页面的相关接口
  */
-export  const HappyListCache = {
+export const HappyListCache = {
 
     /**
      * 这个接口比较蛋疼，用的开源的接口，不同的接口规律也不一样
@@ -26,20 +15,19 @@ export  const HappyListCache = {
     getHappyList(data) {
         let key = '&key=ec451dc7ad29d93c72de5f281123a496&';
 
-        switch(data.happyType)
-        {
-        case HAPPY_TYPE.TEXT:
-            return fetch('happy/joke/randJoke.php?' + key + parseParam(data))
-            .then(response => response.json()).then(response => response.result);
-            break;
-        case HAPPY_TYPE.IMAGE:
-            return fetch('happy/joke/randJoke.php?type="pic"' + key + parseParam(data))
-            .then(response => response.json()).then(response => response.result);
-            break;
-        case HAPPY_TYPE.OTHER:
-            return fetch('api/joke/img/text.from?' + key + parseParam(data))
-            .then(response => response.json()).then(response => response.result.data);
-            break;
+        switch (data.happyType) {
+            case HAPPY_TYPE.TEXT:
+                return fetch('happy/joke/randJoke.php?' + key + parseParam(data))
+                    .then(response => response.json()).then(response => response.result);
+                break;
+            case HAPPY_TYPE.IMAGE:
+                return fetch('happy/joke/randJoke.php?type="pic"' + key + parseParam(data))
+                    .then(response => response.json()).then(response => response.result);
+                break;
+            case HAPPY_TYPE.OTHER:
+                return fetch('api/joke/img/text.from?' + key + parseParam(data))
+                    .then(response => response.json()).then(response => response.result.data);
+                break;
         }
 
     }
@@ -48,7 +36,7 @@ export  const HappyListCache = {
 /**
  *  天气相关的接口
  */
-export  const WeatherCache = {
+export const WeatherCache = {
 
     /**
      * 天气相关的接口
@@ -58,7 +46,7 @@ export  const WeatherCache = {
     getWeather(data) {
         // 'op/onebox/weather/query' + key + parseParam(data)
         let key = '?key=7cc263ec409e69b4aeb54b55639bcc87&';
-         return fetch('http://wthrcdn.etouch.cn/weather_mini?city='+data)
+        return fetch('http://wthrcdn.etouch.cn/weather_mini?city=' + data)
             .then(response => response.json()).then(response => response.data);
     }
 }
@@ -66,7 +54,7 @@ export  const WeatherCache = {
 /**
  *  机器人相关的接口
  */
-export  const RobotCache = {
+export const RobotCache = {
 
     /**
      * 机器人相关的接口
@@ -76,7 +64,7 @@ export  const RobotCache = {
     getWeather(data) {
         // 'op/robot/index' + key + parseParam(data)
         let key = '?key=50cd35eb206526335a1c1e0f149f98a5&';
-        return fetch('http://api.qingyunke.com/api.php?key=free&appid=0&msg='+data)
+        return fetch('http://api.qingyunke.com/api.php?key=free&appid=0&msg=' + data)
             .then(response => response.json()).then(response => response.content);
     }
 }
@@ -91,8 +79,7 @@ function parseParam(obj) {
         if (obj.hasOwnProperty(p)) {
             if (typeof(obj[p]) == " function ") {
                 obj[p]();
-            }
-            else {
+            } else {
                 paramStr += p + '=' + encodeURIComponent(obj[p]) + "&";
             }
         }
@@ -100,4 +87,3 @@ function parseParam(obj) {
     return paramStr;
 
 }
-

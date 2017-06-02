@@ -7,8 +7,10 @@
 
 第一步：安装：npm install
 
- a:或者用淘宝的cnpm代理安装会更快，方法是：
+ 或者用淘宝的cnpm代理安装会更快，方法是：
+ 
  1.安装cnpm：npm install -g cnpm --registry=https://registry.npm.taobao.org 
+ 
  2.用cnpm代理npm安装： cnpm install
 
 第二步：运行本机：npm run dev
@@ -35,7 +37,7 @@
 
 **没有在线预览
 
-**代码提示：cache.js里边的feath 暂时还好多浏览器不支持。所以在messageList.vue上换了另外一种写法，就是用的是vue-resource的this.$http(xxx)重新写了个,因此还要单独再 npm install vue-resource 一次
+**代码提示：cache.js里边的feath 暂时还好多浏览器不支持。所以在messageList.vue上换了另外一种写法，就是用的是vue-resource的this.$http(xxx)重新写了个,因此还要单独再 npm/cnpm install vue-resource 一次
 
 **在机器人聊天的（robot）页面的接口也是一个免费的接口，因此有个跨域的问题，可以使用谷歌的扩展插件 Access-Control-Expose-Headers 来实现想要的效果。
 
